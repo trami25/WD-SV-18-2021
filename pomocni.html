@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srpsko Narodno pozorište- Novi Sad</title>
+    <link rel="stylesheet" href="pomocni.css">
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+</head>
+<body>
+    <header>
+       <h1>POZORIŠTA SRBIJE</h1> 
+    </header>
+    <section class="nav">
+        <a href="index.html">Početna</a>
+        <a href="administrator.html">Administrator</a>
+        <a href="korisnik.html" >Korisnik</a>
+        <div class="menu2">
+        <a href="#" id="menu2">Sign Up</a>
+        <a href="#" id="menu1">Log In</a>
+    </div>
+    </section>
+    <div class="popup">
+        <div class="popup-content">
+            <div id="close">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="">
+            <h2 class="pop">Kreirajte svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br>
+               <input type="text" placeholder="Ime" name="name" id="name" required>
+               <br>
+               <input type="text" placeholder="Prezime" name="surname" id="surname" required>
+               <br>
+                <input type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <br>
+                <label for="date">Datum rođenja: </label>
+                <br> 
+                <input type="date"  id="date" name="date" required>
+                <br>
+                <input type="text" placeholder="Adresa" id="address" name="address"  required>
+                <br>
+                <input type="tel" placeholder="Broj telefona" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <a href="" class="button"> Submit</a>
+            </form>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+            <div id="close1">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="">
+            <h2 class="pop">Prijavite se na svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br>
+               <a href="" class="button"> Submit</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('menu2').addEventListener('click', function(){
+            document.querySelector('.popup').style.display='flex';
+        });
+        document.getElementById('close').addEventListener('click', function(){
+            document.querySelector('.popup').style.display='none';
+        });
+        document.getElementById('menu1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='flex';
+        });
+        document.getElementById('close1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='none';
+        });
+    </script>
+   <main>
+       <div class="main">
+    <img src="./slike/snp.jpg" alt="Srpsko Narodno pozorište" class="img">
+    <br><hr>
+        <h2 class="snp">Srpsko Narodno pozorište</h2>
+        <br><hr>
+        <p>Adresa:<br> Pozorišni trg 1, 21101 Novi Sad</p>
+        <br><hr>
+        <p>Broj predstava:<br> 3</p>
+        <br><hr>
+        <p><a href="https://sr.m.wikipedia.org/sr-ec/%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE_%D0%BF%D0%BE%D0%B7%D0%BE%D1%80%D0%B8%D1%88%D1%82%D0%B5" style="color: rgb(188, 19, 10);"> Više</a></p>
+    </div>
+    <h3>Predstave u ponudi narednih dana:</h3>
+   <div id="pre1">
+    
+       <hr>
+       <hr>
+        <div class="container">
+            <img src="./slike/violinista.jpg" class="image">
+            <div class="overlay">
+                <div class="text"><b>Vioinista</b> <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis illo expedita velit nemo deleniti in fugiat quasi quisquam qui vel exercitationem aliquam maxime, amet unde ab repudiandae? Esse, enim earum. <a href="predstave.html">Opširnije</a></div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="container">
+            <img src="./slike/dopler.jpg" class="image">
+            <div class="overlay">
+                <div class="text"> <b>Dopler</b> <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis illo expedita velit nemo deleniti in fugiat quasi quisquam qui vel exercitationem aliquam maxime, amet unde ab repudiandae? Esse, enim earum. <a href="predstave.html">Opširnije</a></div>
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div class="container">
+            <img src="./slike/višnjik.jpg" class="image">
+            <div class="overlay">
+                <div class="text"><b>Višnjik</b> <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis illo expedita velit nemo deleniti in fugiat quasi quisquam qui vel exercitationem aliquam maxime, amet unde ab repudiandae? Esse, enim earum. <a href="predstave.html">Opširnije</a></div>
+            </div>
+        </div>
+   </div>
+   <hr>
+ 
+   </main>
+   <footer>
+    <p style="color: antiquewhite; padding: 30px; text-align: center;background-color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque deleniti, labore similique perspiciatis voluptatum voluptatibus porro, animi molestias modi id neque quam recusandae voluptas aspernatur saepe provident repellendus veniam quod?</p>            
+    </footer>
+</body>
+</html>

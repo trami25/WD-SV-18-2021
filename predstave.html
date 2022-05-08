@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violinista</title>
+    <link rel="stylesheet" href="predstave.css">
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>POZORIŠTA SRBIJE</h1>
+    </header>
+    <section class="nav">
+        <a href="index.html">Početna</a>
+        <a href="administrator.html">Administrator</a>
+        <a href="korisnik.html">Korisnik</a>
+        <div class="menu2">
+        <a href="#" id="menu2">Sign Up</a>
+        <a href="#" id="menu1">Log In</a>
+    </div>
+    </section>
+    <div class="popup">
+        <div class="popup-content">
+            <div id="close">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="">
+            <h2 class="pop">Kreirajte svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br>
+               <input type="text" placeholder="Ime" name="name" id="name" required>
+               <br>
+               <input type="text" placeholder="Prezime" name="surname" id="surname" required>
+               <br>
+                <input type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <br>
+                <label for="date">Datum rođenja: </label>
+                <br> 
+                <input type="date"  id="date" name="date" required>
+                <br>
+                <input type="text" placeholder="Adresa" id="address" name="address"  required>
+                <br>
+                <input type="tel" placeholder="Broj telefona" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <a href="#" class="button"> Submit</a>
+            </form>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+            <div id="close1">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="">
+            <h2 class="pop">Prijavite se na svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br>
+               <a href="" class="button"> Submit</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('menu2').addEventListener('click', function(){
+            document.querySelector('.popup').style.display='flex';
+        });
+        document.getElementById('close').addEventListener('click', function(){
+            document.querySelector('.popup','.popup2').style.display='none';
+        });
+        document.getElementById('menu1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='flex';
+        });
+        document.getElementById('close1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='none';
+        });
+    </script>
+    <h3 style="text-align: center; font-size: 50px;">Opis predstave</h3>
+    <br>
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo harum non odit ducimus odio rem eius repellendus laudantium corporis reiciendis delectus officia, culpa quidem, architecto sequi cum tempore autem consequatur!
+    </p>
+    <br>
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nostrum, voluptatum sapiente, expedita repellat animi praesentium assumenda libero possimus necessitatibus ipsam temporibus incidunt voluptatem? Perferendis dolorem quia eveniet cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam nostrum magni rem sunt voluptate praesentium non quibusdam error fuga incidunt, impedit soluta porro officiis nemo architecto tenetur illum natus consectetur? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus minima sapiente, corrupti id ullam aspernatur ipsum illum hic, quisquam odio alias laudantium voluptatem sint adipisci voluptatibus iusto accusamus cumque quo? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eaque optio ipsam magni ea sint aperiam est, amet autem quo quae quam nemo aliquid dignissimos neque. Quae amet ipsa delectus?</p>
+    <br>
+
+    <main>
+        <img src="./slike/violinista.jpg" alt="Violinista" width="100%" height="550vh" style="border-radius: 10px;">
+        <br>
+        <table style="text-align:center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;">
+            <caption style="border: dotted; color: black;background-color: #f6000091;">O predstavi</caption>
+            <tr>
+                <th>Naziv</th>
+                <td>Violinista</td>
+                <td rowspan="6"><a href="izmenapredstava.html"> Izmeni podatke</a></td>
+                <td rowspan="6"><a href="#"> Obriši podatke</a></td>
+            </tr>
+            <tr>
+                <th>Kod predstave</th>
+                <td>001</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Trajanje</th>
+                <td>90 minuta</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Žanr</th>
+                <td>tragikomedija</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Cena karte</th>
+                <td>350 dinara</td>
+                <td></td>
+            <td></td>
+            </tr>
+            <tr>
+                <th>Max broj osoba</th>
+                <td>50</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        </main>
+   <br> <br>
+
+    <p style="text-align:center; margin-top: 15px;">
+    <label for="rate" style="color: black;"> Vaša ocena:</label>
+    <br>
+    <input type="number" max="5" min="1" required style="width: 10vw;color: black;">
+    <br>
+    <button class="button" style="padding:10px">Potvrdi</button>
+</p>
+<br><br>
+    <footer>
+        <p style="color: antiquewhite; padding: 30px; text-align: center; background-color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque deleniti, labore similique perspiciatis voluptatum voluptatibus porro, animi molestias modi id neque quam recusandae voluptas aspernatur saepe provident repellendus veniam quod?</p>            
+        </footer>
+            
+        </body>
+</html>

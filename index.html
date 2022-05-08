@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozorišta Srbije</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+</head>
+<body>
+            <header>
+            <h1>POZORIŠTA SRBIJE</h1>
+        </header>
+        <section class="nav">
+            <a href="index.html">Početna</a>
+            <a href="administrator.html">Administrator</a>
+            <a href="korisnik.html">Korisnik</a>
+            <div class="menu2">
+            <a href="#" id="menu2">Sign Up</a>
+            <a href="#" id="menu1">Log In</a>
+        </div>
+        </section>
+        <div class="popup">
+            <div class="popup-content">
+                <div id="close">+</div>
+               <img src="user1.jpg" alt="" class="user"> 
+               <form action="">
+                <h2 class="pop">Kreirajte svoj nalog!</h2>
+                <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+                   <br>
+                   <input type="password" placeholder="Lozinka" name="password" id="password" required>
+                   <br>
+                   <input type="text" placeholder="Ime" name="name" id="name" required>
+                   <br>
+                   <input type="text" placeholder="Prezime" name="surname" id="surname" required>
+                   <br>
+                    <input type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <br>
+                    <label for="date">Datum rođenja: </label>
+                    <br> 
+                    <input type="date"  id="date" name="date" required>
+                    <br>
+                    <input type="text" placeholder="Adresa" id="address" name="address"  required>
+                    <br>
+                    <input type="tel" placeholder="Broj telefona" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <br>
+                    <a href="" class="button"> Submit</a>
+                </form>
+            </div>
+        </div>
+        <div class="popup2">
+            <div class="popup-content2">
+                <div id="close1">+</div>
+               <img src="user1.jpg" alt="" class="user"> 
+               <form action="">
+                <h2 class="pop">Prijavite se na svoj nalog!</h2>
+                <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+                   <br>
+                   <input type="password" placeholder="Lozinka" name="password" id="password" required>
+                   <br>
+                   <a href="" class="button"> Submit</a>
+                </form>
+            </div>
+        </div>
+        <script>
+            document.getElementById('menu2').addEventListener('click', function(){
+                document.querySelector('.popup').style.display='flex';
+            });
+            document.getElementById('close').addEventListener('click', function(){
+                document.querySelector('.popup','.popup2').style.display='none';
+            });
+            document.getElementById('menu1').addEventListener('click', function(){
+                document.querySelector('.popup2').style.display='flex';
+            });
+            document.getElementById('close1').addEventListener('click', function(){
+                document.querySelector('.popup2').style.display='none';
+            });
+        </script>
+          
+        <section class="navi">
+            
+            <ul id="navi-list">
+                <li class="navi-list-item"><a href="https://www.facebook.com/"><img class="navi-img" src="./slike/facebook.png"></a></li>
+                    <li class="navi-list-item"><a href="https://www.instagram.com/"><img class="navi-img" src="./slike/instagram.png"></a></li>
+                    <li class="navi-list-item"><a href="https://twitter.com/home?lang=sr"><img class="navi-img" src="./slike/twitter.png"></a></li>
+                    
+                </ul>
+                <h1>DOBRODOŠLI!</h1>
+                <br>  
+            </section>
+       
+        <main>
+            
+            <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab vero doloremque quia nostrum quod eaque minima. Dolorum ipsa iure reiciendis tempore. Natus velit eos inventore facilis voluptatibus id molestiae dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis numquam quo aspernatur atque veritatis laborum eaque quibusdam ullam magni, adipisci libero. Aliquam animi, accusantium tenetur illum repudiandae id totam!</p>
+            <br>
+            <hr>
+
+            <h2>PREGLED POZORIŠTA</h2>
+            
+            <div id="images">
+                <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/NoviSad-SNP.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Srpsko Narodno pozorište u Novom Sadu</div>
+                    
+                    </div>
+                </a>
+                </div>
+                <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/NP beograd.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Narodno pozorište u Beogradu</div>
+                    </div>
+                    </a>
+                </div>
+                <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/NP NIŠ.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Narodno pozorište u Nišu</div>
+                    </div>
+                </a>
+                </div>
+                <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/Kragujevac KST.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Knjaževsko-srpski teatar u Kragujevcu</div>
+                    </div>
+                </a>
+                </div>
+                    <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/ZP ŠABAC.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Šabačko pozorište </div>
+                    </div>
+                </a>
+                </div>
+                <div class="container">
+                    <a href="pomocni.html">
+                    <img src="./slike/np Užice.jpg" class="image">
+                    <div class="overlay">
+                        <div class="text">Narodno pozorište u Užicu</div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        
+            
+        </main>
+       
+        <footer>
+        <p style="color: antiquewhite; padding: 30px; text-align: center;background-color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque deleniti, labore similique perspiciatis voluptatum voluptatibus porro, animi molestias modi id neque quam recusandae voluptas aspernatur saepe provident repellendus veniam quod?</p>            
+        </footer>
+</body>
+</html>
