@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izmena podataka o predstavi</title>
+    <link rel="stylesheet" href="predstave.css">
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+    <style>
+        @media only screen and (max-width: 700px) {
+ .user{
+   width: auto;
+ }
+}
+    </style>
+</head>
+<body style="background-color: brown;">
+    <section id="nav">
+        <a href="index.html">Početna</a>
+        <a href="administrator.html">Administrator</a>
+        <a href="korisnik.html">Korisnik</a>
+        <div class="menu2">
+        <a href="#" id="menu2">Sign Up</a>
+        <a href="#" id="menu1">Log In</a>
+    </div>
+    </section>
+    <div class="popup">
+        <div class="popup-content">
+            <div id="close">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="" method="POST" id="registerForm">
+            <h2 class="pop">Kreirajte svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename1" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password1" required>
+               <br>
+               <input type="text" placeholder="Ime" name="name" id="name" required>
+               <br>
+               <input type="text" placeholder="Prezime" name="surname" id="surname" required>
+               <br>
+                <input type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <br>
+                <label for="date">Datum rođenja: </label>
+                <br> 
+                <input type="date"  id="date" name="date" required>
+                <br>
+                <input type="text" placeholder="Adresa" id="address" name="address"  required>
+                <br>
+                <input type="tel" placeholder="Broj telefona" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <button type="submit" id="button1">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+            <div id="close1">+</div>
+           <img src="user1.jpg" alt="" class="user"> 
+           <form action="https://webd-f66b2-default-rtdb.europe-west1.firebasedatabase.app/" method="GET" id="loginForm">
+            <h2 class="pop">Prijavite se na svoj nalog!</h2>
+            <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+               <br>
+               <input type="password" placeholder="Lozinka" name="password" id="password" required>
+               <br>
+               <button type="submit" id="button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('menu2').addEventListener('click', function(){
+            document.querySelector('.popup').style.display='flex';
+        });
+        document.getElementById('close').addEventListener('click', function(){
+            document.querySelector('.popup').style.display='none';
+        });
+        document.getElementById('menu1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='flex';
+        });
+        document.getElementById('close1').addEventListener('click', function(){
+            document.querySelector('.popup2').style.display='none';
+        });
+    </script>
+ <h1 style="text-align: center; color: aliceblue;">Izmena podataka o korisniku</h1>
+ <form name="changeForm">
+    <fieldset>
+        <legend style="color: rgb(59, 16, 16); font-size: 30px; text-align: center;">Podaci za izmenu</legend> 
+        <p style="text-align: center; justify-content: center;">
+            <label for="name">Ime korisnika:</label>
+            <input type="text" name="name" id="name7" value="Nikola" >
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="surname">Prezime:</label>
+            <input type="text" name="surname" id="surname7" value="Mitrović">
+    </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="username">Korisničko ime:</label>
+            <input type="username" name="username" id="username7" value="mnikola300">
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="password">Lozinka:</label>
+            <input type="password"  name="password" id="password7" value="Nikolam12345">
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email7" value="mnikola300@gmail.com">
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="address">Adresa:</label>
+            <input type="address" name="address" id="address7" value="Katunska 4">
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="date">Datum rođenja:</label>
+            <input type="date" name="date" id="date7" value="2002-11-25" required>
+        </p>
+        <br>
+        <p style="text-align: center; justify-content: center;">
+            <label for="tel">Broj telefona:</label>
+            <input type="tel" name="phone" id="phone7" value="0645000018">
+            
+        </p>
+        <br>
+        <br>
+        <p style="text-align: center; justify-content: center; ">
+            <button id="button7" style="color: black;"> Sačuvaj izmene</button>
+        </p>
+        <br>
+        <br>
+        <p style="text-align: center; justify-content: center; ">
+            <button id="button79" style="color: black;">Deaktiviraj</button>
+        </p>
+        <br>
+        </fieldset>
+    </form>
+    <footer>
+        <p style="color: antiquewhite; padding: 30px; text-align: center;background-color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque deleniti, labore similique perspiciatis voluptatum voluptatibus porro, animi molestias modi id neque quam recusandae voluptas aspernatur saepe provident repellendus veniam quod?</p>            
+        </footer>
+        <script src="izmenak.js"></script>
+    <script src="izmenak2.js"></script>  
+    <script src="login-register.js"></script>      
+
+    </body>
+</html>

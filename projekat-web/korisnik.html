@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil korisnika</title>
+    <link rel="icon" type="image/x-icon" href="./slike/favicon.ico">
+    <style>
+      body{
+        margin: 0;
+        padding:0;
+        height: 350px;
+      }
+      #nav{
+  text-align: center;
+  display: inline-block;
+  background-color: black;
+  opacity: 70%;
+  width: 100%;
+  height: 45px;
+  }
+  #nav a{
+  text-decoration: none;
+  padding: 14px 18px;
+  justify-content: center;
+ color: #e41414;
+}
+#nav a:hover{
+  background-color: rgb(67, 27, 27);
+}
+#nav , .menu{
+  display: flex;
+  flex-direction: row;
+}
+.menu2{
+  text-align: center;
+  display: inline-block;
+  background-color: black;
+  width: 100%;
+  height: 45px;
+  padding-right: 10px;
+
+}
+ .menu2 a{
+  background-color: rgb(255, 255, 255);
+  color:black;
+  float: right;
+  border-radius: 50%;
+}
+ .menu2 a:hover{
+  background-color: chocolate;
+}
+.popup{
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  background-color:rgba(29, 24, 24, 0.7) ;
+  position: absolute;
+  top: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1;
+}
+.popup-content{
+  width: 500px;
+  height: 790px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+input{
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+
+}
+#close, #close1{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.popup2{
+ width: 100%;
+ height: 100%;
+ background-color:rgba(29, 24, 24, 0.7) ;
+ position: absolute;
+ top: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ display: none;
+ z-index: 1;
+
+}
+.user{
+  width: 10vw;
+  height: 10vh;
+}
+.popup-content2{
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+        tr{
+          font-size: 20px;  
+        }
+@media only screen and (max-width: 700px) {
+ .user{
+   width: auto;
+ }
+}
+    </style>
+</head>
+
+<body style="background-color: rgb(139, 45, 45); opacity: 50px;">
+  <section id="nav">
+    <a href="index.html">Početna</a>
+    <a href="administrator.html">Administrator</a>
+    <a href="korisnik.html">Korisnik</a>
+    <div class="menu2">
+    <a href="#" id="menu2">Sign Up</a>
+    <a href="#" id="menu1">Log In</a>
+</div>
+</section>
+<div class="popup">
+  <div class="popup-content">
+      <div id="close">+</div>
+     <img src="user1.jpg" alt="" class="user"> 
+     <form action="" method="POST" id="registerForm">
+      <h2 class="pop">Kreirajte svoj nalog!</h2>
+      <input type="text" placeholder="Korisničko ime" name="ename" id="ename1" required>
+         <br>
+         <input type="password" placeholder="Lozinka" name="password" id="password1" required>
+         <br>
+         <input type="text" placeholder="Ime" name="name" id="name" required>
+         <br>
+         <input type="text" placeholder="Prezime" name="surname" id="surname" required>
+         <br>
+          <input type="text" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <br>
+          <label for="date">Datum rođenja: </label>
+          <br> 
+          <input type="date"  id="date" name="date" required>
+          <br>
+          <input type="text" placeholder="Adresa" id="address" name="address"  required>
+          <br>
+          <input type="tel" placeholder="Broj telefona" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <br>
+          <button type="submit" id="button1">Submit</button>
+      </form>
+  </div>
+</div>
+<div class="popup2">
+  <div class="popup-content2">
+      <div id="close1">+</div>
+     <img src="user1.jpg" alt="" class="user"> 
+     <form action="https://webd-f66b2-default-rtdb.europe-west1.firebasedatabase.app/" method="GET" id="loginForm">
+      <h2 class="pop">Prijavite se na svoj nalog!</h2>
+      <input type="text" placeholder="Korisničko ime" name="ename" id="ename" required>
+         <br>
+         <input type="password" placeholder="Lozinka" name="password" id="password" required>
+         <br>
+         <button type="submit" id="button">Submit</button>
+      </form>
+  </div>
+</div>
+<script>
+  document.getElementById('menu2').addEventListener('click', function(){
+      document.querySelector('.popup').style.display='flex';
+  });
+  document.getElementById('close').addEventListener('click', function(){
+      document.querySelector('.popup').style.display='none';
+  });
+  document.getElementById('menu1').addEventListener('click', function(){
+      document.querySelector('.popup2').style.display='flex';
+  });
+  document.getElementById('close1').addEventListener('click', function(){
+      document.querySelector('.popup2').style.display='none';
+  });
+</script>
+    <img src="./slike/male1.png" alt="" class="user" style=" display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%; width: auto;">
+    <table style="width: 100%; height: 100%; text-align: center; margin: 10px;">
+        <caption style="border: dotted; color: black;background-color: #f6000091; font-size: 60px;">O korisniku</caption>
+        <tr>
+            <th>Ime korisnika</th>
+            <td>Nikola</td>
+            
+        </tr>
+        <tr>
+            <th>Prezime</th>
+            <td>Mitrović</td>
+            
+        </tr>
+        <tr>
+            <th>Korisničko ime</th>
+            <td>mniko300</td>
+            
+        </tr>
+        <tr>
+            <th>Lozinka</th>
+            <td>***************</td>
+            
+        </tr>
+        <tr>
+            <th>E-mail adresa</th>
+            <td>mnikola300@gmail.com</td>
+        </tr>
+        <tr>
+            <th>Datum rođenja</th>
+            <td>25.11.2002</td>
+        </tr>
+        <tr>
+            <th>Adresa</th>
+            <td>Katunska 4</td>
+        </tr>
+        <tr>
+            <th>Broj telefona</th>
+            <td>0645000018</td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="window.location.href='izmenakorisnika.html'" style="padding:10px ;  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;; background-color:red">Izmena podataka</button>
+    <br>
+    <footer style=" margin-top: 550px;">
+      <p style="color: antiquewhite; padding: 30px; text-align: center;background-color: black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque deleniti, labore similique perspiciatis voluptatum voluptatibus porro, animi molestias modi id neque quam recusandae voluptas aspernatur saepe provident repellendus veniam quod?</p>            
+      </footer>
+      <script src="login-register.js"></script>  
+  </body>
+</html>
